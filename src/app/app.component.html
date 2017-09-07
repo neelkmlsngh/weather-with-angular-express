@@ -1,6 +1,20 @@
+<!-- 
 <h1>
 Weather App
 <hr>
-<input type="text" [(ngModel)]=city>
-<button (click)=search()>Search</button>
+<input type="text" [(ngModel)]=cityName>
+<button (click)=searchCity()>Search</button>
 </h1>
+
+<input #city value="">
+
+<ul *ngIf="results">
+  <li *ngFor="let result of results | slice:0:9">
+    <a href="{{ result.latest }}" target="_blank">
+      {{ result.q }}
+    </a>
+
+  </li>
+</ul>
+
+<input type="button" name="click" (click)="getDetails(city)"> -->

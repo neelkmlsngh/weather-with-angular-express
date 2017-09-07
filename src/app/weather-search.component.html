@@ -1,0 +1,18 @@
+<pre><div class="container">
+     <header class="jumbotron weat"><h1>               WeatherStatus</h1></header>
+     <div class="jumbotron">
+     <input #city value="" placeholder="Enter Your City name..."><input type="button" value="Enter" name="click" (click)="getDetails(city)">
+     </div>
+<ul *ngIf="forcastDetail">
+<p *ngFor="let detail of forcastDetail" class="card">
+		Date:{{detail.date}} ,  max_Temp:{{detail.day.maxtemp_c}}
+		</p>
+  
+</ul>
+</div></pre>
+
+
+
+
+
+
